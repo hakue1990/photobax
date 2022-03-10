@@ -23,6 +23,31 @@ header a {
 }
 main {
   min-height: 82vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.searchForm {
+  display: flex;
+  justify-self: center;
+  height: 40px;
+}
+.searchForm--input {
+  padding: 8px 12px;
+  margin: 0;
+}
+.searchForm--btn {
+  padding: 8px 20px;
+  border: none;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #2a93d5;
+
+  color: white;
+}
+.searchForm--btn:hover {
+  cursor: pointer;
+  background-color: #1982c4;
 }
 footer {
   height: 10vh;
@@ -32,4 +57,5 @@ footer {
   align-items: center;
   padding-right: 30px;
   justify-content: flex-end;
+  letter-spacing: 1.3px;
 }
