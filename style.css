@@ -6,7 +6,6 @@
   padding: 0;
 }
 body {
-  background-color: #333;
   font-family: 'Montserrat', sans-serif;
 }
 header {
@@ -27,10 +26,24 @@ main {
   justify-content: center;
   padding-top: 30px;
 }
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery img {
+  margin: 10px;
+}
+.gallery-img {
+  text-align: center;
+  margin: 20px;
+}
 .searchForm {
   display: flex;
-  justify-self: center;
   height: 40px;
+  justify-content: center;
+  margin: 20px;
 }
 .searchForm--input {
   padding: 8px 12px;
