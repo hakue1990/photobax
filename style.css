@@ -54,7 +54,7 @@ main {
   border: none;
   text-transform: uppercase;
   margin: 0;
-  background-color: #2a93d5;
+  background-color: cornflowerblue;
 
   color: white;
 }
@@ -71,4 +71,7 @@ footer {
   padding-right: 30px;
   justify-content: flex-end;
   letter-spacing: 1.3px;
+}
+.blue-color {
+  color: cornflowerblue;
 }

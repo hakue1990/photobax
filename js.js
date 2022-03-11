@@ -3,8 +3,9 @@ let searchInput = document.querySelector('.searchForm--input');
 const form = document.querySelector('form');
 let searchValue;
 
+const auth = '563492ad6f91700001000001f2b6832ea4164cb59ba0cbb5532b3a27';
+
 async function curatedPhotos() {
-  const auth = '563492ad6f91700001000001f2b6832ea4164cb59ba0cbb5532b3a27';
   const dataFetch = await fetch(
     'https://api.pexels.com/v1/curated?per_page=15',
     {
@@ -17,7 +18,6 @@ async function curatedPhotos() {
   );
   const data = await dataFetch.json();
   data.photos.forEach((photo) => {
-    console.log(photo);
     const galleryImg = document.createElement('div');
     galleryImg.classList.add('gallery-img');
     galleryImg.innerHTML = `
@@ -29,9 +29,8 @@ async function curatedPhotos() {
 }
 
 async function searchPhotos(query) {
-  const auth = '563492ad6f91700001000001f2b6832ea4164cb59ba0cbb5532b3a27';
   const dataFetch = await fetch(
-    `https://api.pexels.com/v1/search?${query}=nature&per_page=15`,
+    `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&page=1`,
     {
       method: 'GET',
       headers: {
@@ -40,7 +39,10 @@ async function searchPhotos(query) {
       },
     }
   );
+  gallery.textContent = '';
+  searchInput.value = '';
   const data = await dataFetch.json();
+  console.log(data);
   data.photos.forEach((photo) => {
     console.log(photo);
     const galleryImg = document.createElement('div');
